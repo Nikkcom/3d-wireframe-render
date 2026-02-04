@@ -117,4 +117,26 @@ public class Point3D {
         double py = y / z;
         return new Point2D.Double(px, py);
     }
+
+    public Point3D normalize() {
+        double length = Math.sqrt(x * x + y * y + z * z);
+        if (length == 0) return new Point3D(0, 0, 0);
+        return new Point3D(x / length, y / length, z / length);
+    }
+
+    public double dot(Point3D other) {
+        return this.x * other.x + this.y * other.y + this.z * other.z;
+    }
+
+    public Point3D cross(Point3D other) {
+        return new Point3D(
+                this.y * other.z - this.z * other.y,
+                this.z * other.x - this.x * other.z,
+                this.x * other.y - this.y * other.x
+        );
+    }
+
+    public Point3D subtract(Point3D other) {
+        return new Point3D(this.x - other.x, this.y - other.y, this.z - other.z);
+    }
 }
