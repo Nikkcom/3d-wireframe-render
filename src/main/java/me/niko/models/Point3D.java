@@ -47,6 +47,7 @@ public class Point3D {
         y = newY;
         z = newZ;
     }
+
     public void rotateYZInPlace(double angle, double centerY, double centerZ) {
         double c = Math.cos(angle);
         double s = Math.sin(angle);
