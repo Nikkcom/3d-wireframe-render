@@ -1,4 +1,8 @@
-package me.niko.models;
+package me.niko.models.shapes;
+
+import me.niko.models.Edge;
+import me.niko.models.Point3D;
+import me.niko.models.ViewableModel;
 
 import java.awt.*;
 import java.util.List;
@@ -6,13 +10,13 @@ import java.util.List;
 public class CubeModel implements ViewableModel {
     private final List<Point3D> vertices;
     private final List<Edge> edges;
-    private Color color = Color.GREEN;
+    private Color color;
 
-    private double tx = 0;
-    private double ty = 0;
-    private double tz = 2.0;
 
     public CubeModel(double size) {
+        this(size, Color.GREEN);
+    }
+    public CubeModel(double size, Color color) {
         double s = size / 2;
 
         vertices = List.of(
@@ -31,6 +35,8 @@ public class CubeModel implements ViewableModel {
                 new Edge(4,5), new Edge(5,6), new Edge(6,7), new Edge(7,4),
                 new Edge(0,4), new Edge(1,5), new Edge(2,6), new Edge(3,7)
         );
+
+        this.color = color;
     }
 
 

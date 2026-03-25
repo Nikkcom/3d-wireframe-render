@@ -1,14 +1,22 @@
-package me.niko.models;
+package me.niko.models.shapes;
+
+import me.niko.models.Edge;
+import me.niko.models.Point3D;
+import me.niko.models.ViewableModel;
 
 import java.awt.*;
 import java.util.List;
 
-public class StarModel implements ViewableModel {
+public class DiamondModel implements ViewableModel {
     private final List<Point3D> vertices;
     private final List<Edge> edges;
-    private Color color = Color.RED;
+    private Color color;
 
-    public StarModel(double size) {
+    public DiamondModel(double size) {
+        this(size, Color.RED);
+    }
+
+    public DiamondModel(double size, Color color) {
         double s = size;
 
         vertices = List.of(
@@ -26,6 +34,8 @@ public class StarModel implements ViewableModel {
                 new Edge(2,4), new Edge(2,5),
                 new Edge(3,4), new Edge(3,5)
         );
+
+        this.color = color;
     }
 
     @Override
