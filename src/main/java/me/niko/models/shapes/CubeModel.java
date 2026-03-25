@@ -1,4 +1,8 @@
-package me.niko.models;
+package me.niko.models.shapes;
+
+import me.niko.models.Edge;
+import me.niko.models.Point3D;
+import me.niko.models.ViewableModel;
 
 import java.awt.*;
 import java.util.List;
