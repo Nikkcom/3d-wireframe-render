@@ -8,16 +8,16 @@ import java.awt.Color;
 import java.awt.Dimension;
 
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
 
         final Color BACKGROUND_COLOR = Color.DARK_GRAY;
-        final Color MODEL_COLOR = Color.GREEN;
-        final double MODEL_SIZE = 0.5;
+        final Color MODEL_COLOR = Color.RED;
+        final double MODEL_SIZE = 1.0;
         final ViewableModel MODEL = new CubeModel(MODEL_SIZE);
 
-        final ModelView view = new ModelView(MODEL_COLOR, MODEL, new Dimension(500, 500));
+        ModelView view = new ModelView(MODEL_COLOR, MODEL, new Dimension(500, 500));
         JFrame frame = new JFrame();
-        frame.setTitle("Firkant Model");
+        frame.setTitle("3D visning");
         frame.setContentPane(view);
         frame.getContentPane().setBackground(BACKGROUND_COLOR);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,9 +25,9 @@ public class Main {
         frame.setVisible(true);
 
 
-        final double FPS = 60;
-        final double dt = 1.0/FPS;
-        final double rotationSpeed = Math.PI/7;
+        double FPS = 60;
+        double dt = 1.0/FPS;
+        double rotationSpeed = Math.PI/7;
 
         new Timer(16, e -> {
             double deltaAngleXY = rotationSpeed * dt;
