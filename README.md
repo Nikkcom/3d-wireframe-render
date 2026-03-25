@@ -16,7 +16,7 @@ cd 3d-wireframe-render
 
 #### 2. Compile and run
 ```
-javac -d out src/main/java/me/niko/*.java src/main/java/me/niko/models/*.java src/main/java/me/niko/view/*.java
+javac -d out src/main/java/me/niko/*.java src/main/java/me/niko/models/*.java src/main/java/me/niko/models/shapes/*.java src/main/java/me/niko/view/*.java
 java -cp out me.niko.Main
 ```
 
