@@ -49,12 +49,12 @@ java -cp out me.niko.Main
 
 White diamond shape
 ```
-java -cp out me.niko.Main --shape diamond --color '#ffffff'
+java -cp out me.niko.Main --shape diamond --color #ffffff
 ```
 
 Blue cube shape
 ```
-java -cp out me.niko.Main --shape cube --color '#0000ff'
+java -cp out me.niko.Main --shape cube --color #0000ff
 ```
 
 
