@@ -8,7 +8,7 @@ This project is a Java implementation of a 3D wireframe renderer. It constructs,
 ## Screenshots / Demo
 ![Demo GIF](assets/blue_cube.gif)
 
-![Demo GIF](assets/blue_cube.gif)
+![Demo Animation](assets/red_cube.png)
 
 
 ## Usage
