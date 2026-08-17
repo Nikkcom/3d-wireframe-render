@@ -6,12 +6,10 @@ This project is a Java implementation of a 3D wireframe renderer. It constructs,
 
 
 ## Screenshots / Demo
-![Demo Animation](assets/red_cube.png)
-<details>
-<summary>Additional. Click to expand</summary>
+![Demo GIF](assets/blue_cube.gif)
 
 ![Demo GIF](assets/blue_cube.gif)
-</details>
+
 
 ## Usage
 #### 1. Clone the repository
